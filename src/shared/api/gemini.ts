@@ -31,7 +31,7 @@ export const generateRequestUrl = (
 
 const generateRequestParams = (prompt: string) => {
   const generationConfig: GenerationConfig = {
-    temperature: 0.7,
+    temperature: 0.9,
     topP: 0.95
   }
 
@@ -67,7 +67,7 @@ const generateRequestParams = (prompt: string) => {
 export const getRequestConfig = async (
   role: ChatRole,
   content: string,
-  model: string = "gemini-1.5-flash"
+  model: string = "gemini-2.0-flash"
 ): Promise<RequestParams> => {
   const storage = await browser.storage.local.get({
     [StorageKey.GeminiAPIKey]: "",
