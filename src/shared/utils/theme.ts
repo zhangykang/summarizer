@@ -46,20 +46,11 @@ export function applySurfaceStyles(
   }
 }
 
-export const applyThemeBody = (color: string) => {
-  const argbColor = argbFromHex(color)
-  const theme = themeFromSourceColor(argbColor, [
-    {
-      name: "custom-1",
-      value: argbColor,
-      blend: true
-    }
-  ])
-
-  const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-
-  applyTheme(theme, { target: document.body, dark: systemDark })
-  applySurfaceStyles(theme, { dark: systemDark })
+export const applyThemeBody = async (baseColor: string) => {
+  const dark = false
+  const theme = themeFromSourceColor(argbFromHex(baseColor))
+  applyTheme(theme, { target: document.body, dark })
+  applySurfaceStyles(theme, { dark })
 }
 
 export const initTheme = async () => {
