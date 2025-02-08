@@ -306,6 +306,41 @@
     border: 0.0625rem solid var(--md-sys-color-surface-variant);
     border-radius: var(--md-sys-shape-corner-large);
   }
+
+  @media (prefers-color-scheme: dark) {
+    color: #FFFFFF;
+    
+    a {
+      color: var(--md-sys-color-primary-container);
+      
+      &:hover,
+      &:focus {
+        border-bottom: 0.0625rem solid var(--md-sys-color-primary-container);
+      }
+    }
+
+    blockquote {
+      border-left-color: var(--md-sys-color-surface-variant);
+      
+      footer {
+        color: var(--md-sys-color-on-surface-variant);
+      }
+    }
+
+    mark {
+      color: var(--md-sys-color-on-secondary-container);
+      background-color: var(--md-sys-color-secondary-container);
+      border-bottom-color: var(--md-sys-color-secondary);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #FFFFFF;
+      
+      small {
+        color: var(--md-sys-color-on-surface-variant);
+      }
+    }
+  }
 }
 
 .md-table {

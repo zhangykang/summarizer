@@ -99,3 +99,8 @@
   --md-sys-state-layer-pressed: 0.12;
   --md-sys-state-layer-dragged: 0.16;
 }
+
+@media (prefers-color-scheme: dark) {
+  --md-sys-color-on-background: 255, 255, 255;
+  --md-sys-color-on-surface: 255, 255, 255;
+}
